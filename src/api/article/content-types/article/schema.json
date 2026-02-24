@@ -55,6 +55,11 @@
       "relation": "manyToOne",
       "target": "api::category.category"
     },
+    "channel": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::channel.channel"
+    },
     "blocks": {
       "type": "dynamiczone",
       "components": [

@@ -29,6 +29,11 @@
       "type": "uid",
       "targetField": "name",
       "required": true
+    },
+    "channel": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::channel.channel"
     }
   }
 }
