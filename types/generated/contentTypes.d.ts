@@ -457,7 +457,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
         };
       }>;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
-    channel: Schema.Attribute.Relation<'manyToOne', 'api::channel.channel'>;
+    channels: Schema.Attribute.Relation<'manyToMany', 'api::channel.channel'>;
     cover: Schema.Attribute.Media<'images'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -536,7 +536,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    channel: Schema.Attribute.Relation<'manyToOne', 'api::channel.channel'>;
+    channels: Schema.Attribute.Relation<'manyToMany', 'api::channel.channel'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

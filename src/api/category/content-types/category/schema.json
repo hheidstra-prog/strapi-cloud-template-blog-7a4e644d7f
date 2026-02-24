@@ -30,9 +30,9 @@
       "targetField": "name",
       "required": true
     },
-    "channel": {
+    "channels": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::channel.channel"
     }
   }
